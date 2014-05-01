@@ -1,10 +1,10 @@
 (require 'package)
 
-(package-initialize)
-
 (when (>= emacs-major-version 24)
   (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milbox.net/packages/") t))
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t))
+
+(package-initialize)
 
 (defun require-package (package-name)
   (when (not (package-installed-p package-name))
