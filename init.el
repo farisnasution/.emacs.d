@@ -8,6 +8,7 @@
 
 (defvar my-emacs-packages
   '(clojure-mode
+    auto-complete
     elein
     cider
     ac-nrepl
@@ -21,14 +22,17 @@
     gandalf-theme
     purple-haze-theme
     solarized-theme
-    evil-paredit))
+    evil-paredit
+    sr-speedbar
+    projectile))
 
 (require-packages my-emacs-packages)
 
 (require 'init-clojure)
 (require 'init-evil)
-
+(require 'init-speedbar)
 (require 'powerline)
+
 (powerline-default-theme)
 
 (setq make-backup-files nil)

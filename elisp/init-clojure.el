@@ -5,11 +5,17 @@
 (global-hl-line-mode 1)
 
 (require 'rainbow-delimiters)
+(require 'ac-nrepl)
 
-;(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'clojure-mode-hook (lambda () (paredit-mode)))
 (add-hook 'clojure-mode-hook (lambda () (rainbow-delimiters-mode)))
+(add-hook 'clojure-mode-hook (lambda () 
+			       (local-set-key (kbd "RET") 'newline-and-indent)))
+(add-hook 'clojure-mode-hook (lambda () (auto-complete-mode)))
 
-(provide 'init-clojure)
+(add-hook 'cider-nrepl-mode-hook (lambda () (ac-nrepl-setup)))
+(add-hook 'cider-mode-hook (lambda () (ac-nrepl-setup)))
+(eval-after-load "auto-complete" '(add-to-list 'ac-modes 'cider-repl-mode))
 
 (setq cider-repl-pop-to-buffer-on-connect nil)
 (setq cider-prompt-save-file-on-load nil)
