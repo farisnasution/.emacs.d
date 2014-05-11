@@ -24,7 +24,9 @@
     solarized-theme
     evil-paredit
     sr-speedbar
-    projectile))
+    projectile
+    web-mode
+    circe))
 
 (require-packages my-emacs-packages)
 
@@ -42,6 +44,7 @@
 (key-chord-define evil-normal-state-map "gh" 'ace-jump-mode)
 
 (menu-bar-mode -1)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -51,7 +54,7 @@
  '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector ["#000000" "#8b0000" "#00ff00" "#ffa500" "#7b68ee" "#dc8cc3" "#93e0e3" "#dcdccc"])
  '(compilation-message-face (quote default))
- '(custom-enabled-themes (quote (monokai)))
+ '(custom-enabled-themes (quote (cyberpunk)))
  '(custom-safe-themes (quote ("c739f435660ca9d9e77312cbb878d5d7fd31e386a7758c982fa54a49ffd47f6e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "e16a771a13a202ee6e276d06098bc77f008b73bbac4d526f160faa2d76c1dd0e" "fc3ba70e150efbe45db40b4b4886fc75716b4f3b1247a4b96e5be7cfbe4bc9e1" "5b3bd478f014d1ff16e1f8ee6e13329c274dd33721f14459d0d2d8f6d93f629d" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "8ac31e1bc1920b33d478dfafb0b45989a00ede15a2388ea16093e7d0988c48d0" "60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" default)))
  '(display-battery-mode t)
  '(fci-rule-color "#383838")
@@ -65,6 +68,7 @@
  '(powerline-color1 "#191919")
  '(powerline-color2 "#111111")
  '(show-paren-mode t)
+ '(speedbar-show-unknown-files t)
  '(syslog-debug-face (quote ((t :background unspecified :foreground "#A1EFE4" :weight bold))))
  '(syslog-error-face (quote ((t :background unspecified :foreground "#F92672" :weight bold))))
  '(syslog-hour-face (quote ((t :background unspecified :foreground "#A6E22E"))))
