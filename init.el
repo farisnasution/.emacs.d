@@ -1,5 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "/emacs.d/elpa")
+(add-to-list 'load-path "~/.emacs.d/elpa")
 (add-to-list 'load-path "~/.emacs.d/elisp")
 
 (scroll-bar-mode -1)
