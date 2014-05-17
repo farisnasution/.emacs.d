@@ -16,13 +16,14 @@
     powerline
     ace-jump-mode
     evil
+    evil-leader
+    evil-paredit
     key-chord
     monokai-theme
     cyberpunk-theme
     gandalf-theme
     purple-haze-theme
     solarized-theme
-    evil-paredit
     sr-speedbar
     projectile
     web-mode
@@ -34,17 +35,19 @@
 (require 'init-evil)
 (require 'init-speedbar)
 (require 'powerline)
+(require 'sr-speedbar)
 
 (powerline-default-theme)
+(sr-speedbar-toggle)
+(sr-speedbar-refresh-toggle)
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
-(require 'ace-jump-mode)
-(key-chord-define evil-normal-state-map "gh" 'ace-jump-mode)
-
 (menu-bar-mode -1)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+(projectile-global-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
