@@ -24,7 +24,6 @@
     gandalf-theme
     purple-haze-theme
     solarized-theme
-    sr-speedbar
     projectile
     web-mode
     circe))
@@ -35,11 +34,8 @@
 (require 'init-evil)
 (require 'init-speedbar)
 (require 'powerline)
-(require 'sr-speedbar)
 
 (powerline-default-theme)
-(sr-speedbar-toggle)
-(sr-speedbar-refresh-toggle)
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
