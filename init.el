@@ -32,7 +32,6 @@
 
 (require 'init-clojure)
 (require 'init-evil)
-(require 'init-speedbar)
 (require 'powerline)
 
 (powerline-default-theme)
