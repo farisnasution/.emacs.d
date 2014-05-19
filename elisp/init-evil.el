@@ -16,7 +16,10 @@
  "e" 'projectile-find-file-other-window
  "q" 'evil-beginning-of-line
  "w" 'evil-end-of-line
- "k" 'kill-buffer)
+ "k" 'kill-buffer
+ "v" 'split-window-vertically
+ "h" 'split-window-horizontally
+ "1" 'delete-other-windows)
 
 (evil-mode 1)
 (key-chord-mode 1)
