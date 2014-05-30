@@ -19,7 +19,8 @@
  "k" 'kill-buffer
  "v" 'split-window-vertically
  "h" 'split-window-horizontally
- "1" 'delete-other-windows)
+ "1" 'delete-other-windows
+ "b" 'switch-to-buffer)
 
 (evil-mode 1)
 (key-chord-mode 1)

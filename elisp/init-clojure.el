@@ -16,6 +16,7 @@
 (add-hook 'cider-nrepl-mode-hook (lambda () (ac-nrepl-setup)))
 (add-hook 'cider-mode-hook (lambda () (ac-nrepl-setup)))
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+(add-hook 'cider-mode-hook (lambda () (cider-repl-toggle-pretty-printing)))
 (eval-after-load "auto-complete" '(add-to-list 'ac-modes 'cider-repl-mode))
 
 (setq cider-repl-pop-to-buffer-on-connect nil)
